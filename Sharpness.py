@@ -4,13 +4,6 @@ Created on Fri Nov  4 16:05:58 2022
 
 @author: birib
 """
-
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Nov  4 16:05:58 2022
-
-@author: birib
-"""
 import argparse
 import albumentations as A
 import skimage.io

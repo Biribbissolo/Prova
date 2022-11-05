@@ -3,6 +3,7 @@
 Created on Sat Nov  5 17:21:03 2022
 
 If you need to change the thresholds of the separation test, 
+in order to separate your images more correctly,
 please change them in the Test Section (function : telescope_test).
 
 @author: Antonio Vispi

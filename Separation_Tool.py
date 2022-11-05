@@ -45,13 +45,13 @@ def telescope_test(image):
 
 
   ###########  Test Section  #########
-  if np.sum(immagine_2)/norm_2 <= 3 and np.sum(immagine_1)/norm_1 < 100:
+  if np.sum(immagine_2)/norm_2 <= 2.5 and np.sum(immagine_1)/norm_1 < 103:
     Test = 2;           # there is a lot of black ----> Photos with a lot of black circular border
 
-  elif np.sum(immagine_1)/norm_1 < 100:
+  elif np.sum(immagine_1)/norm_1 < 103:
     Test = 0;           # there is black ----> Photo with black circular border                    
 
-  elif np.sum(immagine_1)/norm_1 >= 100:
+  elif np.sum(immagine_1)/norm_1 >= 103:
     Test = 1;         # little black around ----> Full Rectangular Photo
   
   return Test

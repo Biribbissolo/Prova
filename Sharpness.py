@@ -34,7 +34,7 @@ def Sharpness (path_in,path_out):
 
   for file in os.listdir(directory):
     filename = os.fsdecode(file)
-    image = img.imread(path_in+filename)
+    image = img.imread(path_in+'/'+filename)
 
     # ----- TRASFORMAZIONE ------
  

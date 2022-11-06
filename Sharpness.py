@@ -53,8 +53,8 @@ def Sharpness (path_in,path_out):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('path_in', help='input path of the specific class')
-    parser.add_argument('path_out', help='output path for saving the specific class')
+    parser.add_argument('--path_in', help='input path of the specific class')
+    parser.add_argument('--path_out', help='output path for saving the specific class')
 
     args = parser.parse_args()
     Sharpness (args.path_in,args.path_out)

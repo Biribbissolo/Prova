@@ -100,8 +100,8 @@ def Separator (path_in,path_out):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('path_in', help='input path of the specific class')
-    parser.add_argument('path_out', help='outpu path for saving the specific class')
+    parser.add_argument('--path_in', help='input path of the specific class')
+    parser.add_argument('--path_out', help='outpu path for saving the specific class')
 
     args = parser.parse_args()
     Separator (args.path_in,args.path_out)

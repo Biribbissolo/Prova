@@ -16,9 +16,9 @@ import random
 
 def Classic_Augmentation (path_in, path_out, Telescope_multiplicator, Super_Telescope_multiplicator, Rectangle_multiplicator):
 
-    path_C = (path_in+'/Telescope/')                # Telescope
-    path_SC = (path_in+'/Super_Telescope/')         # Super_Telescope
-    path_R = (path_in+'/Rectangle/')                  # Rectangle 
+    path_C = (path_in+'/telescope/')                # Telescope
+    path_SC = (path_in+'/super_Telescope/')         # Super_Telescope
+    path_R = (path_in+'/rectangle/')                  # Rectangle 
     
     destinazione = (path_out+'/')       # FINAL PATH
     os.mkdir(path_out)

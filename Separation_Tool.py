@@ -61,10 +61,10 @@ def Separator (path_in,path_out):
   print('Your class separation is processing...')
   print('\n')
   
-  os.mkdir(path_out)
-  os.mkdir(path_out+'/telescope/')
-  os.mkdir(path_out+'/super_telescope')
-  os.mkdir(path_out+'/rectangle')
+  os.mkdir(path_out, exist_ok = True)
+  os.mkdir(path_out+'/telescope/', exist_ok = True)
+  os.mkdir(path_out+'/super_telescope', exist_ok = True)
+  os.mkdir(path_out+'/rectangle', exist_ok = True)
   
   ##### Loop #####
     

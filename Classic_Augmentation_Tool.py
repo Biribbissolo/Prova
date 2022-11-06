@@ -22,6 +22,7 @@ def Classic_Augmentation (path_in, path_out, Telescope_multiplicator, Super_Tele
     
     destinazione = (path_out+'/')       # FINAL PATH
     os.mkdir(path_out)
+    print('Your class is processing...')
     
     
     ##################################################################################################################################################################################

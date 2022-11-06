@@ -24,7 +24,7 @@ def Sharpness (path_in,path_out):
 
   print('Your class is processing...')
   
-  os.mkdir(path_out, exist_ok = True)
+  os.makedirs(path_out, exist_ok = True)
   
   ##### Trasformation Loop ####
     

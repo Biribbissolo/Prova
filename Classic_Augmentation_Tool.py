@@ -68,7 +68,7 @@ def Classic_Augmentation (path_in, path_out, Telescope_multiplicator, Super_Tele
     # -------------------------------------------------------------------------------
     
           
-         for i in range (1,int(Telescope_multiplicator)):  # Photos have increased by a factor of 'Telescope_multiplicator'
+         for i in range (1,int(Telescope_multiplicator) + 1):  # Photos have increased by a factor of 'Telescope_multiplicator'
            
            if i==1:
              transform = A.Compose([                                        
@@ -144,7 +144,7 @@ def Classic_Augmentation (path_in, path_out, Telescope_multiplicator, Super_Tele
          # ----------------------------------------------------------------------------
     
           
-         for i in range (1,int(Super_Telescope_multiplicator)):   # Photos have increased by a factor of 'Super_Telescope_multiplicator'
+         for i in range (1,int(Super_Telescope_multiplicator) + 1):   # Photos have increased by a factor of 'Super_Telescope_multiplicator'
            
            if i==1:
              Pin = str(random.randint(1, 9999))+'_'
@@ -231,7 +231,7 @@ def Classic_Augmentation (path_in, path_out, Telescope_multiplicator, Super_Tele
     
          else:   # If, on the other hand, the image is not so rectangular ...
           
-           for i in range (1,int(Rectangle_multiplicator)):                  # Photos have increased by a factor of 'Rectangular_multiplicator'
+           for i in range (1,int(Rectangle_multiplicator) + 1):                  # Photos have increased by a factor of 'Rectangular_multiplicator'
     
              if i==1:
     

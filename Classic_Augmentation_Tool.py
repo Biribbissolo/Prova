@@ -15,6 +15,7 @@ import os
 import random
 
 def fractional_augmenter(number):
+    number = float(number)
     frac = number % 1
     frac = round(frac, 2)
     integ = int(number)

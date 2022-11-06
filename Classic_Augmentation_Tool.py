@@ -21,7 +21,7 @@ def Classic_Augmentation (path_in, path_out, Telescope_multiplicator, Super_Tele
     path_R = (path_in+'/rectangle/')                  # Rectangle 
     
     destinazione = (path_out+'/')       # FINAL PATH
-    os.mkdir(path_out)
+    os.mkdir(path_out, exist_ok = True)
     print('Your class is processing...')
     
     

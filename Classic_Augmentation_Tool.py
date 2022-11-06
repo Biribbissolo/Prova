@@ -280,11 +280,11 @@ def Classic_Augmentation (path_in, path_out, Telescope_multiplicator, Super_Tele
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('path_in', help='input path of the specific class')
-    parser.add_argument('path_out', help='output path for saving the specific class')
-    parser.add_argument('Telescope_multiplicator', help='Black Artifact Image Multiplication Factor (Telescope)')
-    parser.add_argument('Super_Telescope_multiplicator', help='Multiplication factor of images with a lot of black artifact (Super_Telescope)')
-    parser.add_argument('Rectangle_multiplicator', help='Image multiplication factor without black artifact (Rectangular)')
+    parser.add_argument('--path_in', help='input path of the specific class')
+    parser.add_argument('--path_out', help='output path for saving the specific class')
+    parser.add_argument('--Telescope_multiplicator', help='Black Artifact Image Multiplication Factor (Telescope)')
+    parser.add_argument('--Super_Telescope_multiplicator', help='Multiplication factor of images with a lot of black artifact (Super_Telescope)')
+    parser.add_argument('--Rectangle_multiplicator', help='Image multiplication factor without black artifact (Rectangular)')
 
     args = parser.parse_args()
     Classic_Augmentation (args.path_in,args.path_out,args.Telescope_multiplicator,args.Super_Telescope_multiplicator,args.Rectangle_multiplicator)

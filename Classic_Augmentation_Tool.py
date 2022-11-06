@@ -14,6 +14,21 @@ import cv2
 import os
 import random
 
+def fractional_augmenter(number):
+    frac = number % 1
+    frac = round(frac, 2)
+    integ = int(number)
+    x=random.randint(1, 100)
+    is_true = (x < frac*100)
+
+    if is_true:
+        one_more_time = integ + 1
+    else:
+        one_more_time = integ
+  
+    return one_more_time
+
+
 def Classic_Augmentation (path_in, path_out, Telescope_multiplicator, Super_Telescope_multiplicator, Rectangle_multiplicator):
 
     path_C = (path_in+'/telescope/')                # Telescope
@@ -68,8 +83,9 @@ def Classic_Augmentation (path_in, path_out, Telescope_multiplicator, Super_Tele
     
     # -------------------------------------------------------------------------------
     
-          
-         for i in range (1,round(float(Telescope_multiplicator)) + 1):  # Photos have increased by a factor of 'Telescope_multiplicator'
+         Statistical_Telescope = fractional_augmenter(Telescope_multiplicator)
+        
+         for i in range (1, Statistical_Telescope + 1):  # Photos have increased by a factor of 'Telescope_multiplicator'
            
            if i==1:
              transform = A.Compose([                                        
@@ -144,8 +160,9 @@ def Classic_Augmentation (path_in, path_out, Telescope_multiplicator, Super_Tele
     
          # ----------------------------------------------------------------------------
     
-          
-         for i in range (1,round(float(Super_Telescope_multiplicator)) + 1):   # Photos have increased by a factor of 'Super_Telescope_multiplicator'
+         Statistical_Super_Telescope = fractional_augmenter(Super_Telescope_multiplicator)
+        
+         for i in range (1, Statistical_Super_Telescope + 1):   # Photos have increased by a factor of 'Super_Telescope_multiplicator'
            
            if i==1:
              Pin = str(random.randint(1, 9999))+'_'
@@ -232,7 +249,9 @@ def Classic_Augmentation (path_in, path_out, Telescope_multiplicator, Super_Tele
     
          else:   # If, on the other hand, the image is not so rectangular ...
           
-           for i in range (1,round(float(Rectangle_multiplicator)) + 1):                  # Photos have increased by a factor of 'Rectangular_multiplicator'
+            Statistical_Rectangle = fractional_augmenter(Rectangle_multiplicator)
+            
+            for i in range (1, Statistical_Rectangle + 1):                  # Photos have increased by a factor of 'Rectangular_multiplicator'
     
              if i==1:
     

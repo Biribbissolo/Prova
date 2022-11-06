@@ -47,7 +47,7 @@ def Sharpness (path_in,path_out):
     k = k+1  
     #############################
     
-  print(str(k)+'_images of the current class have been saved')
+  print(str(k)+' images of the current class have been saved')
   print('Now you can move on to the next class')
 
 

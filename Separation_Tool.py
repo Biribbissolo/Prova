@@ -62,7 +62,7 @@ def Separator (path_in,path_out):
   print('\n')
   
   os.makedirs(path_out, exist_ok = True)
-  os.makedirs(path_out+'/telescope/', exist_ok = True)
+  os.makedirs(path_out+'/telescope', exist_ok = True)
   os.makedirs(path_out+'/super_telescope', exist_ok = True)
   os.makedirs(path_out+'/rectangle', exist_ok = True)
   

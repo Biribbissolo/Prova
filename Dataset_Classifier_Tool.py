@@ -12,7 +12,7 @@ import skimage.io as img
 
 
 def extrapolate_parameters(input_percentages,input_classes):
-  c = '#'
+  c = '%'
   support = [pos for pos, char in enumerate(input_percentages) if char == c]
   percentages = np.zeros(len(support)-1)
   for i in range (0,len(support)-1):

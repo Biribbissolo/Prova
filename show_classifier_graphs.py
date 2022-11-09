@@ -69,6 +69,7 @@ def training_graphs(path_in_json,path_out):
     axs[1].legend(('Validation', 'Training'), loc='lower right', shadow=True)
     
     plt.savefig(path_out+'/Graphs.png')
+    print('The graph has been saved in the destination path.')
 
 def main():
     parser = argparse.ArgumentParser()

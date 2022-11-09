@@ -2,7 +2,9 @@
 """
 Created on Wed Nov  9 17:03:26 2022
 
-@author: birib
+If necessary, modify the abscissa axes in the abscissa axis definition section.
+
+@author: Antonio Vispi
 """
 
 import argparse
@@ -19,6 +21,8 @@ def load_json_arr(json_path):
     return lines
 
 def training_graphs(path_in_json):
+    
+  print('Note: if a dimension error appears, check the abscissa vector of the graph for correct dimensions.')  
 
   experiment_metrics = load_json_arr(path_in_json)
 
@@ -41,9 +45,10 @@ def training_graphs(path_in_json):
     if sample['mode'] == 'train':
       if 'top-1' in sample:
         Train_Accuracy.append(sample['top-1'])
-
-  Epoch_Train = np.linspace(1, 160, num=800)
-  Epoch_Val = np.linspace(1, 160, num=160)
+  
+  #Definition of the abscissa axes. 
+  Epoch_Train = np.linspace(1, 160, num=800)   # Number of epochs sampled to have the same size as Train_Losses and Train_Accuracy
+  Epoch_Val = np.linspace(1, 160, num=160)     # Number of epochs sampled to have the same size as Val_Losses and Val_Accuracy
 
   fig, axs = plt.subplots(1,2, figsize=(20, 15))
   plt.rcParams['font.size'] = 18

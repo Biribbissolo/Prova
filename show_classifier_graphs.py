@@ -20,7 +20,7 @@ def load_json_arr(json_path):
             lines.append(json.loads(line))
     return lines
 
-def training_graphs(path_in_json):
+def training_graphs(path_in_json,path_out):
     print('Note: if a dimension error appears, check the abscissa vector of the graph for correct dimensions.')  
 
     experiment_metrics = load_json_arr(path_in_json)
@@ -67,13 +67,16 @@ def training_graphs(path_in_json):
     axs[1].set(xlabel='Epoch')
     axs[1].set(ylabel='Accuracy(%)')
     axs[1].legend(('Validation', 'Training'), loc='lower right', shadow=True)
+    
+    plt.savefig(path_out+'/Graphs.png')
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--path_in_json', help='Enter the path of the .json file containing all the annotations of the model training data')
-
+    parser.add_argument('--path_out', help='The path in which the graph summarizing the training data will be saved.')
+    
     args = parser.parse_args()
-    training_graphs(args.path_in_json)
+    training_graphs(args.path_in_json,args.path_out)
 
 if __name__ == '__main__':
     main()

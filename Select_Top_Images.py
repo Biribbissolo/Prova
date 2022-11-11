@@ -42,11 +42,11 @@ def Top_images(path_in,path_out,top_images_num):
     
     # Sort that list by total number of pixels of image
     byPixels = sorted(list, key=lambda item: item[1])
-    byPixels = byPixels[(len(byPixels)-round(((len(byPixels)-float(top_images_num))/2))-float(top_images_num)):len(byPixels)]
+    byPixels = byPixels[(len(byPixels)-round(((len(byPixels)-int(top_images_num))/2))-int(top_images_num)):len(byPixels)]
     
     # Sort that list by the sharpness score of image
     bySharpness = sorted(byPixels, key=lambda item: item[2])
-    bySharpness = bySharpness[(len(bySharpness)-float(top_images_num)):len(bySharpness)]
+    bySharpness = bySharpness[(len(bySharpness)-int(top_images_num)):len(bySharpness)]
     
     print('Start of saving of the '+top_images_num+' top images ...')
     i=0

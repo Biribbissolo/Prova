@@ -29,6 +29,7 @@ def estimate_sharpness_test(I):
 def Top_images(path_in,path_out,top_images_num):
 
     directory = os.fsencode(path_in)
+    os.makedirs(path_out, exist_ok = True)
       
     print('Start of selection of the '+top_images_num+' top images ...')
     list=[]
